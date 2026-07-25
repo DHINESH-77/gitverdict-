@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { ArrowLeft, User, Terminal, Heart, Users, Clock, TrendingUp, Download, GitBranch, Star, AlertTriangle, Zap, ExternalLink, Share2 } from 'lucide-react';
+import { ArrowLeft, User, Terminal, Heart, Users, Clock, TrendingUp, Download, GitBranch, Star, AlertTriangle, Zap, ExternalLink, Share2, Code } from 'lucide-react';
 import confetti from 'canvas-confetti';
 import Card from './ui/Card';
 import MetricRow from './MetricRow';
