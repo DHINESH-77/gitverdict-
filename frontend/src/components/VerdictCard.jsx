@@ -286,6 +286,8 @@ export function VerdictCard({ data, onBack }) {
 
 function TabContent({ activeTab, breakdown, repositories }) {
   const AUDIT_KEYS = ['originality', 'commitPattern', 'commitQuality', 'readmeAuthenticity', 'codeDumps'];
+  // Must be at top level — React Rules of Hooks
+  const [repoFilter, setRepoFilter] = useState('all');
 
   if (activeTab === 'audit') {
     return (
@@ -299,7 +301,6 @@ function TabContent({ activeTab, breakdown, repositories }) {
 
   if (activeTab === 'repos') {
     const repos = repositories || [];
-    const [repoFilter, setRepoFilter] = useState('all');
 
     if (repos.length === 0) {
       return <p style={{ color: 'hsl(var(--text-muted))', fontSize: '0.85rem' }}>No original repositories found.</p>;
